@@ -46,6 +46,13 @@ function animate(){
   requestAnimationFrame(animate);
 }
 
+function enterSite(){
+document.getElementById("music").scrollIntoView({
+behavior:"smooth"
+});
+}
+
+
 init();
 animate();
 
