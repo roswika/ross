@@ -1,84 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RO$$</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROSS</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+margin:0;
+background:black;
+color:white;
+font-family:'Playfair Display', serif;
+overflow-x:hidden;
+}
+
+/* LANDING */
+.landing {
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:url('assets/images/hero.jpg') center/cover no-repeat;
+position:relative;
+}
+
+.landing::after {
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+}
+
+/* NAME */
+.artist-name {
+font-size:120px;
+letter-spacing:15px;
+z-index:2;
+opacity:0;
+animation:fadeIn 2s forwards;
+}
+
+/* ENTER BUTTON */
+.enter-btn {
+margin-top:40px;
+border:1px solid white;
+padding:15px 40px;
+cursor:pointer;
+z-index:2;
+transition:0.4s;
+}
+
+.enter-btn:hover {
+background:white;
+color:black;
+}
+
+@keyframes fadeIn {
+to { opacity:1; }
+}
+
+/* MUSIC SECTION */
+.music {
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:#050505;
+}
+
+.album {
+width:300px;
+transition:0.5s;
+cursor:pointer;
+}
+
+.album:hover {
+transform:scale(1.1);
+}
+
+</style>
 </head>
+
 <body>
-  <!-- FLOATING PLAYER -->
-<div class="floating-player">
-  <iframe src="https://open.spotify.com/track/0dvdl3XOzvg20k6xsHvkEv?si=0d6797eb22a34e01" width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-</div>
 
+<section class="landing">
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">RO$$</div>
-    <ul class="nav-links">
-      <li><a href="#music">Music</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<h1 class="artist-name">RO$$</h1>
+<div class="enter-btn" onclick="scrollToMusic()">ENTER</div>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>RO$$</h1>
-      <p>Elegance meets vibe.</p>
-      <a href="#music" class="btn">Listen Now</a>
-    </div>
-  </section>
-  
-  <!-- HERO SECTION -->
-<section class="hero">
-  <canvas id="hero-bg"></canvas>
-  <div class="hero-content">
-    <h1>Your Artist Name</h1>
-    <p>Elegance meets vibe.</p>
-    <a href="#music" class="btn">Listen Now</a>
-  </div>
 </section>
 
+<section class="music" id="music">
 
-  <!-- MUSIC SECTION -->
-  <section id="music" class="music">
-    <h2>Music</h2>
-    <div class="music-grid">
-      <div class="track">
-        <iframe src="https://open.spotify.com/track/4E8KwNat9RoEhPdTc7eEO1?si=83661d9f5f6d49a3" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        <p>So Many Eyes(Signs)</p>
-      </div>
-      <div class="track">
-        <iframe src="https://open.spotify.com/track/3BbqDLywChQrshJs6CdSvz?si=d74f44da30f74d1e" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        <p>MINK MOOD</p>
-      </div>
-    </div>
-  </section>
+<img src="assets/images/cover.jpg" class="album">
+<p>Latest Release</p>
 
-  <!-- GALLERY SECTION -->
-  <section id="gallery" class="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <img src="assets/images/photo1.jpg" alt="Photo 1">
-      <img src="assets/images/photo2.jpg" alt="Photo 2">
-      <img src="assets/images/photo3.jpg" alt="Photo 3">
-    </div>
-  </section>
+</section>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Booking & Inquiries: <a href="mailto:yourname@email.com">dorahseko151@email.com</a></p>
-    <div class="socials">
-      <a href="https://www.instagram.com/roooooooosssssssssssss/?hl=en" target="_blank">Instagram</a>
-      <a href="https://www.youtube.com/@roooooooosssssssssssss" target="_blank">YouTube</a>
-    </div>
-  </section>
+<script>
 
-  <script src="js/main.js"></script>
+function scrollToMusic(){
+document.getElementById("music").scrollIntoView({
+behavior:"smooth"
+});
+}
+
+</script>
+
 </body>
 </html>
