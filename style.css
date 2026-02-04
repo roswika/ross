@@ -1,0 +1,168 @@
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: #0A0A0A;
+  color: #FFFFFF;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: fixed;
+  width: 100%;
+  background: rgba(10,10,10,0.9);
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 28px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin-left: 30px;
+}
+
+.navbar ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #D4AF37;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('../assets/images/hero-bg.jpg') center/cover no-repeat;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  padding: 15px 35px;
+  border: 2px solid #D4AF37;
+  color: #D4AF37;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #D4AF37;
+  color: #0A0A0A;
+}
+
+/* MUSIC SECTION */
+.music {
+  padding: 100px 50px;
+  text-align: center;
+}
+
+.music h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.music-grid {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.track p {
+  margin-top: 10px;
+}
+
+/* GALLERY */
+.gallery {
+  padding: 100px 50px;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* CONTACT */
+.contact {
+  padding: 100px 50px;
+  text-align: center;
+}
+
+.contact a {
+  color: #D4AF37;
+  text-decoration: none;
+}
+
+.socials a {
+  margin: 0 15px;
+  color: #FFFFFF;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: #D4AF37;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 50px;
+  }
+  .navbar ul li {
+    margin-left: 15px;
+  }
+  .music-grid {
+    gap: 20px;
+  }
+}
